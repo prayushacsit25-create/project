@@ -14,7 +14,7 @@ int main() {
     int n, i;
 
     // ===== INPUT =====
-    fp = fopen("bank.txt", "w");
+    fp = fopen("record.txt", "w");
     if (fp == NULL) {
         printf("Error opening file!");
         return 1;
