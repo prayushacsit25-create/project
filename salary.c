@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <grpahics.h>
 
 struct account {
     int acc_no;
@@ -26,22 +27,32 @@ int main() {
             printf("%d\t%s\t%s\t%.2f\t%d\n", a[i].acc_no, a[i].name, a[i].address, a[i].balance, a[i].time);
         }
     }
-    int high_balance=a[0].balance;
-    int low_balance=a[0].balance;
-    int high_index=0,low_index=0;
-    for(i=1;i<4;i++){
-        if(a[i].balance>high_balance){
-            high_balance=a[i].balance;
-            high_index=i;
-        }
-        if(a[i].balance<low_balance){
-            low_balance=a[i].balance;
-            low_index=i;
-        }
-    }
-    printf("\nHighest balance is : %.2f\n",high_balance);
-    printf("Lowest balance is : %.2f\n",low_balance);
+    rectangle (240,240,450,360);
 
+for(i=0;i<4;i++){
+
+if(a[i].balance<1000) {
+
+sprintf (text, "Balance less than 1000;");
+
+outtextxy(250,250,text);
+
+sprintf (text, "Acc_no=%d",a[i].acc_no);
+
+outtextxy(250,270,text);
+ 
+sprintf (text, "Name=%s", a[i].name);
+
+outtextxy(250,290,text);
+
+sprintf (text, "Balance=%.2f",a[i].balance);
+
+outtextxy(250,310,text);
+
+}
+
+}
+    
     fclose(fp);
     return 0;
 }
