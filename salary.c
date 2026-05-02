@@ -13,7 +13,7 @@ int main() {
     struct account a[4];
     int i;
 
-    fp = fopen("bank.txt", "r");  // read from file
+    fp = fopen("record.txt", "r");  // read from file
 
     if (fp == NULL) {
         printf("Error opening file!");
@@ -44,6 +44,4 @@ int main() {
 
     fclose(fp);
     return 0;
-
-    
 }
